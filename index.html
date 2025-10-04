@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Foro & Tienda - Guaracha Colombia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">GQ</div>
+    <div>
+      <h1>GuarachaQ - Foro & Tienda</h1>
+      <p class="lead">Comunidad y tienda de guaracha colombiana — noticias, tracks y eventos</p>
+    </div>
+  </div>
+
+  <div class="external-links">
+    <button class="ext-btn" id="btnGoogle">Google</button>
+    <button class="ext-btn" id="btnPorn">Pornhub</button>
+    <button class="ext-btn" id="btnIG">Instagram</button>
+    <button class="ext-btn" id="btnFB">Facebook</button>
+  </div>
+</header>
+
+<main class="grid">
+  <!-- Foro -->
+  <section class="panel">
+    <div class="section-title">
+      <h2>Foro - Conversaciones recientes</h2>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost" id="btnFresh">Recientes</button>
+        <button class="btn btn-ghost" id="btnTop">Populares</button>
+      </div>
+    </div>
+    <div class="posts" id="posts"></div>
+
+    <div class="new-post">
+      <input id="postTitle" placeholder="Título de la publicación" />
+      <textarea id="postBody" rows="3" placeholder="Describe tu publicación..."></textarea>
+      <div style="display:flex; gap:8px;">
+        <select id="postCategory" style="flex:0 0 160px;">
+          <option value="general">General</option>
+          <option value="tracks">Tracks</option>
+          <option value="eventos">Eventos</option>
+          <option value="privados">Privados</option>
+        </select>
+        <button class="btn btn-primary" id="btnPublish">Publicar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="card">
+      <h3>Tienda - Merch & Tracks</h3>
+      <div class="store-products" id="products"></div>
+    </div>
+
+    <div class="card">
+      <h3>Reproductor - Importa tu música</h3>
+      <div class="player">
+        <input type="file" id="audioFiles" accept="audio/*" multiple />
+        <div style="display:flex; gap:8px; margin-top:8px;">
+          <button class="btn btn-primary" id="playBtn">Reproducir</button>
+          <button class="btn btn-ghost" id="pauseBtn">Pausar</button>
+          <button class="btn btn-ghost" id="stopBtn">Detener</button>
+        </div>
+        <div class="playlist" id="playlist"></div>
+        <audio id="audioPlayer" controls style="width:100%; margin-top:8px; display:none"></audio>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p>GuarachaQ — Demo local • Puedes importar archivos y compartir posts locales</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
