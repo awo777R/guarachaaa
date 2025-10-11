@@ -1,6 +1,5 @@
 // --- Enlaces externos ---
 document.getElementById('btnGoogle').onclick = () => window.open('https://www.google.com','_blank');
-document.getElementById('btnPorn').onclick   = () => window.open('https://www.pornhub.com','_blank');
 document.getElementById('btnIG').onclick     = () => window.open('https://www.instagram.com','_blank');
 document.getElementById('btnFB').onclick     = () => window.open('https://www.facebook.com','_blank');
 
